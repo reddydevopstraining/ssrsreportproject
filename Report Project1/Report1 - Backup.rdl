@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DataSource1">
+      <rd:DataSourceID>eebc8375-852b-4564-a86b-4c62db653975</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=BATHULAP;Initial Catalog=SampleDB</ConnectString>
+        <IntegratedSecurity>true</IntegratedSecurity>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <rd:ReportID>aa1cde67-45d3-47c4-a520-4d79e0497a5b</rd:ReportID>
+  <Width>5in</Width>
+  <Body>
+    <Height>2.26in</Height>
+    <ColumnSpacing>0.5in</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>18pt</FontSize>
+          <Color>#1c3a70</Color>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Value>Report1</Value>
+        <CanGrow>true</CanGrow>
+        <Height>0.33in</Height>
+      </Textbox>
+      <List Name="List1">
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>14pt</FontSize>
+        </Style>
+        <ReportItems>
+          <Textbox Name="Name">
+            <Style>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>14pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <rd:DefaultName>Name</rd:DefaultName>
+            <Value>=Fields!Name.Value</Value>
+            <CanGrow>true</CanGrow>
+            <Height>0.27in</Height>
+          </Textbox>
+          <List Name="List2">
+            <Style>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>12pt</FontSize>
+            </Style>
+            <ReportItems>
+              <Textbox Name="Email">
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+                <rd:DefaultName>Email</rd:DefaultName>
+                <Value>=Fields!Email.Value</Value>
+                <CanGrow>true</CanGrow>
+                <Height>0.24in</Height>
+              </Textbox>
+              <List Name="List3">
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>10pt</FontSize>
+                </Style>
+                <ReportItems>
+                  <Textbox Name="PhoneNumber">
+                    <Style>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>10pt</FontSize>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                    <rd:DefaultName>PhoneNumber</rd:DefaultName>
+                    <Value>=Fields!PhoneNumber.Value</Value>
+                    <CanGrow>true</CanGrow>
+                    <Height>0.21in</Height>
+                  </Textbox>
+                  <Table Name="table1">
+                    <Top>0.5in</Top>
+                    <Style />
+                    <Header>
+                      <RepeatOnNewPage>true</RepeatOnNewPage>
+                      <TableRows>
+                        <TableRow>
+                          <TableCells>
+                            <TableCell>
+                              <ReportItems>
+                                <Textbox Name="textbox2">
+                                  <Style>
+                                    <BackgroundColor>#1c3a70</BackgroundColor>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>White</Color>
+                                    <BorderStyle>
+                                      <Default>Solid</Default>
+                                    </BorderStyle>
+                                    <BorderColor>
+                                      <Default>DimGray</Default>
+                                    </BorderColor>
+                                    <TextAlign>Right</TextAlign>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                  <rd:DefaultName>textbox2</rd:DefaultName>
+                                  <Value>ID</Value>
+                                  <CanGrow>true</CanGrow>
+                                  <Height>0.22in</Height>
+                                  <Width>1in</Width>
+                                </Textbox>
+                              </ReportItems>
+                            </TableCell>
+                          </TableCells>
+                          <Height>0.22in</Height>
+                        </TableRow>
+                      </TableRows>
+                    </Header>
+                    <Details>
+                      <TableRows>
+                        <TableRow>
+                          <TableCells>
+                            <TableCell>
+                              <ReportItems>
+                                <Textbox Name="ID">
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>10pt</FontSize>
+                                    <BorderStyle>
+                                      <Default>Solid</Default>
+                                    </BorderStyle>
+                                    <BorderColor>
+                                      <Default>DimGray</Default>
+                                    </BorderColor>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                  <rd:DefaultName>ID</rd:DefaultName>
+                                  <Value>=Fields!ID.Value</Value>
+                                  <CanGrow>true</CanGrow>
+                                  <Height>0.21in</Height>
+                                  <Width>1in</Width>
+                                </Textbox>
+                              </ReportItems>
+                            </TableCell>
+                          </TableCells>
+                          <Height>0.21in</Height>
+                        </TableRow>
+                      </TableRows>
+                    </Details>
+                    <TableColumns>
+                      <TableColumn>
+                        <Width>1in</Width>
+                      </TableColumn>
+                    </TableColumns>
+                    <DataSetName>DataSet1</DataSetName>
+                  </Table>
+                </ReportItems>
+                <Grouping Name="list1_PhoneNumber">
+                  <GroupExpressions>
+                    <GroupExpression>=Fields!PhoneNumber.Value</GroupExpression>
+                  </GroupExpressions>
+                  <PageBreakAtEnd>true</PageBreakAtEnd>
+                </Grouping>
+                <Sorting>
+                  <SortBy>
+                    <SortExpression>=Fields!PhoneNumber.Value</SortExpression>
+                  </SortBy>
+                </Sorting>
+                <Top>0.5in</Top>
+                <DataSetName>DataSet1</DataSetName>
+              </List>
+            </ReportItems>
+            <Grouping Name="list1_Email">
+              <GroupExpressions>
+                <GroupExpression>=Fields!Email.Value</GroupExpression>
+              </GroupExpressions>
+              <PageBreakAtEnd>true</PageBreakAtEnd>
+            </Grouping>
+            <Sorting>
+              <SortBy>
+                <SortExpression>=Fields!Email.Value</SortExpression>
+              </SortBy>
+            </Sorting>
+            <Top>0.5in</Top>
+            <DataSetName>DataSet1</DataSetName>
+          </List>
+        </ReportItems>
+        <Grouping Name="list1_Name">
+          <GroupExpressions>
+            <GroupExpression>=Fields!Name.Value</GroupExpression>
+          </GroupExpressions>
+          <PageBreakAtEnd>true</PageBreakAtEnd>
+        </Grouping>
+        <Sorting>
+          <SortBy>
+            <SortExpression>=Fields!Name.Value</SortExpression>
+          </SortBy>
+        </Sorting>
+        <Top>0.33in</Top>
+        <DataSetName>DataSet1</DataSetName>
+      </List>
+    </ReportItems>
+  </Body>
+  <Language>en-US</Language>
+  <LeftMargin>1in</LeftMargin>
+  <RightMargin>1in</RightMargin>
+  <TopMargin>1in</TopMargin>
+  <BottomMargin>1in</BottomMargin>
+  <PageWidth>8.5in</PageWidth>
+  <PageHeight>11in</PageHeight>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Fields>
+        <Field Name="ID">
+          <DataField>ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PhoneNumber">
+          <DataField>PhoneNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <CommandType>Text</CommandType>
+        <CommandText>SELECT ID, Name, Email, PhoneNumber
+FROM   tbl_Users</CommandText>
+        <Timeout>0</Timeout>
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
